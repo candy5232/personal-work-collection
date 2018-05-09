@@ -1,9 +1,8 @@
+# 学习资源
 
-学习资源
------
-1、vue基础知识
+1、[vue基础知识](https://github.com/keepfool/vue-tutorials)<br>
 
-2、非常好的一些博文
+2、[非常好的一些博文](http://www.cnblogs.com/xiaohuochai/tag/Vue/)<br>
 
 
 
