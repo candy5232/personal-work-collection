@@ -6,7 +6,8 @@ vue-tab    实现选项卡效果
 
 
 2.底部文字变化：
-因为vue使根据数据的变化而实现某些功能的，数据驱动是vue的一大亮点，在点击a标签的时候，就创建了数据curld，v-bind:class和v-show都根据数据的真假而做出相应的行为。
+因为vue使根据数据的变化而实现某些功能的，数据驱动是vue的一大亮点，在点击a标签的时候，就创建了数据curld，v-bind:class和v-show
+都根据数据的真假而做出相应的行为。
 
 
 <!DOCTYPE html>
@@ -51,14 +52,16 @@ vue-tab    实现选项卡效果
   <body>
     <div id="tab">
       <div class="tab-tit">
-        <!--点击设置curId的值  如果curId等于0，第一个a添加cur类名，如果curId等于1，第二个a添加cur类名，以此类推。添加了cur类名，a就会改变样式 @click,:class ,v-show这三个是vue常用的指令或添加事件的方式-->
+        <!--点击设置curId的值  如果curId等于0，第一个a添加cur类名，如果curId等于1，第二个a添加cur类名，以此类推。
+        添加了cur类名，a就会改变样式 @click,:class ,v-show这三个是vue常用的指令或添加事件的方式-->
         <a href="javascript:;" @click="curId=0" :class="{'cur':curId===0}">html</a>
         <a href="javascript:;" @click="curId=1" :class="{'cur':curId===1}">css</a>
         <a href="javascript:;" @click="curId=2" :class="{'cur':curId===2}">javascript</a>
         <a href="javascript:;" @click="curId=3" :class="{'cur':curId===3}">vue</a>
       </div>
       <div class="tab-con">
-        <!--根据curId的值显示div,如果curId等于0，第一个div显示，其它三个div不显示。如果curId等于1，第二个div显示，其它三个div不显示。以此类推-->
+        <!--根据curId的值显示div,如果curId等于0，第一个div显示，其它三个div不显示。如果curId等于1，
+        第二个div显示，其它三个div不显示。以此类推-->
         <div v-show="curId===0">
           html<br/>
         </div>
