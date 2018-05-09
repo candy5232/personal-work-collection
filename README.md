@@ -20,13 +20,10 @@ vue进阶：
 ![](https://candy5232.github.io/personal-work-collection/images/1.png)
 
 
-
 ![](https://candy5232.github.io/personal-work-collection/images/2.png)
 
 
-
 ![](https://candy5232.github.io/personal-work-collection/images/3.png)
-
 
 
 ![](https://candy5232.github.io/personal-work-collection/images/4.png)
