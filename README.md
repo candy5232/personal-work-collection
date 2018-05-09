@@ -16,4 +16,16 @@ vue进阶：
 通过vuex更好的管理应用的数据状态，利用axios更优雅的写出异步请求。
 
 
-https://candy5232.github.io/personal-work-collection/images/1.png
+![](https://candy5232.github.io/personal-work-collection/images/1.png)
+
+
+
+![](https://candy5232.github.io/personal-work-collection/images/2.png)
+
+
+
+![](https://candy5232.github.io/personal-work-collection/images/3.png)
+
+
+
+![](https://candy5232.github.io/personal-work-collection/images/4.png)
