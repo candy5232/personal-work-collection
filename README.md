@@ -14,3 +14,6 @@ vue进阶：
 学习目标：
 通过Vue-cli脚手架工具中webpack配置的学习，能够配置适合自己项目的目录结构，掌握了vue-router的使用快速开发单页应用。
 通过vuex更好的管理应用的数据状态，利用axios更优雅的写出异步请求。
+
+
+https://candy5232.github.io/personal-work-collection/images/1.png
