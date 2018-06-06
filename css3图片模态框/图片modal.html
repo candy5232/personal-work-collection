@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>css3图片模态框</title>
+		<style type="text/css">
+			#myImg{
+				border-radius: 5px;
+				cursor: pointer;
+				transition:0.3s;     /* transition过渡 时长为0.3秒*/
+			}
+			#myImg:hover{
+				opacity: 0.7;  /*鼠标点击图像hover效果为不透明0.7*/
+			}
+			.modal{
+				display: none;  /*默认隐藏*/
+				position: fixed;   /*相对于浏览器窗口进行定位(相对于窗口的固定定位)*/
+				z-index: 1;
+				padding-top: 100px;
+				left: 0;
+				top:0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;    /* 内容被修剪，浏览器会显示滚动条查看其余的内容*/
+				background-color: rgb(0,0,0);
+				background-color: rgba(0,0,0,0.9);
+			}
+			.modal-content{
+				margin: auto;
+				display: block;
+				width: 80%;
+				max-width: 700px;
+			}
+			#caption{
+				margin: auto;
+				display: block;
+				width: 80%;
+				max-width: 700px;
+				text-align: center;
+				color: #ccc;
+				padding: 10px 0;
+				height: 150px;
+			}
+			.modal-content, #caption{
+				-webkit-animation-name: zoom;
+				-webkit-animation-direction: 0.6s; 
+				animation-name: zoom;  /*animation-name 属性为@keyframes动画的名称*/
+				animation-duration: 0.6s;  /*动画完成一个周期所花费为0.6秒*/
+			}
+			@-webkit-keyframes zoom{
+				from{-webkit-transform: scale(0);}
+				to{-webkit-transform: scale(1);}
+			}
+			@keyframes zoom{
+				from{transform: scale(0.1);}   /* @keyframes规则是创建动画。 @keyframes规则内指定一个CSS样式和动画将逐步从目前的样式更改为新的样式。
+				                                     浏览器支持表格中的数字表示支持该属性的第一个浏览器版本号。紧跟在 -webkit-, -ms- 或 -moz- 前的数字为支持该前缀属性的第一个浏览器版本号。*/
+				to{transform: scale(1);}
+			}
+			.close{
+				position: absolute;
+				top: 15px;
+				right: 35px;
+				color: #f1f1f1;
+				font-size: 40px;
+				font-weight: bold;
+				transition:0.3s;	
+			}
+			.close:hover, .close:focus{
+				color: #bbb;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			@media only screen and (max-width:700px ) {
+				.modal-content{
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h2>图片模态框</h2>
+		<p>演示了如何结合css和JavaScript来一起渲染图片。</p>
+		<p>首先，使用CSS来创建modal窗口（对话框），默认是隐藏的。</p>
+		然后，使用JavaScript来显示模态窗口，当我们点击图片时，图片会在弹出的窗口中显示：</p>
+		<img id="myImg" src="img/88dc7fcc74be4e24f1e0bacbd8bef48d.jpg"  alt="动漫情侣爱情图片" width="300" height="200">
+		<div id="myModal" class="modal">
+			<span class="close">X</span>
+			<img class="modal-content" id="img01">
+			<div id="caption"></div>
+		</div>
+		<script>
+			
+			var modal = document.getElementById('myModal');  //获取模态窗口
+			var img = document.getElementById('myImg');      //获取图片模态框，Alt属性作为图片弹出中文本描述
+			var modalImg = document.getElementById('img01');
+			var captionText = document.getElementById('caption');
+			
+			 img.onclick = function(){
+			 	modal.style.display = 'block';
+			 	modalImg.src = this.src;
+			 	modalImg.alt = this.alt;
+			 	captionText.innerHTML = this.alt;
+			 }
+			 var span = document.getElementsByClassName('close')[0]; //获取<span>元素，设置关闭模态框按钮
+			 span.onclick = function(){                   
+			 	modal.style.display = 'none';                       // 点击<span>元素上的(X), 关闭模态框
+			 }
+		</script>
+	</body>
+</html>
