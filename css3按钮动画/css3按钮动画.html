@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css3实例-按钮动画</title>
+		<style>
+			.button{
+				background-color: #F44336;
+				border:none;
+				padding: 20px;
+				width: 200px;
+				border-radius: 4px;
+				color: #fff;
+				font-size: 28px;
+				text-align: center;
+				margin: 5px;
+				cursor: pointer;
+				transition: all 0.5s;
+				
+			}
+			.button span{
+				cursor: pointer;
+				display: inline-block;;
+				position: relative;
+				transition: 0.5s;
+				
+			}
+			.button span:after{
+				content: "≫";
+				position: absolute;
+				top: 0;
+				right: -20px;
+				opacity: 0;
+				transition: 0.5s;
+				
+			}
+			.button:hover span{
+				padding-right: 25px;
+			}
+			.button:hover span:after{
+				opacity: 1;
+				right: 0;
+			}
+		</style>
+	
+	</head>
+	<body>
+		<h2>css3按钮动画-鼠标移动到按钮上后添加箭头标记</h2>
+		<button class="button"><span>Hover</span></button>
+	
+	</body>
+</html>
