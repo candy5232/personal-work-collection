@@ -6,6 +6,11 @@
 </head>
 <body>
 <style type="text/css">
+
+  /*首先是要做css初始化的原因:
+   不同浏览器对各个元素的margin,padding,border,font等属性的定义各有不同，不同浏览器的显示效果可能不一样，为杜绝这种情况，
+   通过css强制让所有元素的属性值都一样，这样浏览器显示就一致了，减少了不兼容情况的发生，这个过程叫做css的初始化。*/
+
   /*雅虎工程师提供的CSS初始化示例代码*/
   body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
   body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
