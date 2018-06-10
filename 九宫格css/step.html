@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九宫格</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style media="screen">
+      body{
+        padding: 50px;
+      }
+    </style>
+</head>
+<body>
+<ul class="grid">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+</ul>
+<style media="screen">
+  .grid{
+    display: flex;   /*弹性容器*/
+    flex-wrap: wrap;   /*让弹性盒子元素在必要的时候拆行*/
+    width: 300px;
+  }
+  .grid li{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border:4px solid #ccc;
+    box-sizing: border-box;    /* 假如需要并排放置两个带边框的框，通过将box-sizing设置为border-box。这样令浏览器呈现出带有指定宽度和高度的框。 */
+    margin-left:-4px;
+    margin-top:-4px;
+
+  }
+  .grid li:nth-child(3n+1){    /*:nth-child(n) 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。 n 可以是数字、关键词或公式。*/
+        margin-left: 0;
+  }
+  .grid li:hover{
+    border-color: red;
+    z-index: 2;
+  }
+</style>
+</body>
+</html>
+/*
+笔试真题：
+从九宫格考CSS综合实力
+flex布局
+box-sizing
+CSS选择器
+z-index
+负边距
+*/
