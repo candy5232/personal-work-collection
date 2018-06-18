@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <script type="text/javascript">
+     window.onload = function () {
+       var oText = document.getElementById('text');
+       var oSelect = document.getElementById('select');
+       var oBtn = document.getElementById('btn');
+
+       oBtn.onclick = function () {
+         //alert(oText.value);
+         //alert(oSelect.value);
+         //alert(oBtn.value);
+        // alert( oText.value + '在' + oSelect.value );
+         //oBtn.value = 'button';
+         //oText.value = '按钮';
+         oText.value = oSelect.value;
+       }
+     }
+   </script>
+</head>
+<body>
+  <input id="text" type="text">
+   <select id="select">
+     <option value="上海">上海</option>
+     <option value="北京">北京</option>
+     <option value="杭州">杭州</option>
+   </select>
+  <input id="btn" type="button" value="按钮">
+</body>
+</html>

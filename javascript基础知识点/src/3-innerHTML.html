@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML</title>
+  <script type="text/javascript">
+    window.onload = function () {
+      var oText = document.getElementById('text');
+      var oBtn = document.getElementById('btn');
+      var oP = document.getElementById('p1');
+
+      oBtn.onclick = function () {
+      // alert( oP.innerHTML );
+       oP.innerHTML = oText.value;
+       oText.value = '';
+      }
+    }
+  </script>
+</head>
+<body>
+<input id="text" type="text">
+<input id="btn" type="button" value="按钮">
+<p id="p1">这是一段文字。。。。。</p>
+
+</body>
+</html>

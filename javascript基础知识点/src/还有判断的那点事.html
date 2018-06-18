@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img1" src="./img/1.jpg">
+<input id="inp1" type="button">
+<script>
+ /* var oImg = document.getElementById('img1');
+  oImg.onclick = function () {
+    //alert(oImg.src);
+    if( oImg.src == 'img/4.jpg'){
+      oImg.src = 'img/2.jpg';
+    }
+  }*/
+ var oInp = document.getElementById('inp1');
+
+     oInp.onclick = function () {
+       oInp.type = 'checkbox';
+       // iE6 IE7 IE8 不支持，会报错！！！
+     }
+     技术上：必须能做到掌握兼容性（兼容性问题的解决方案）
+     需求上：商量着来（提供最准确的呈现方案）
+     /*
+     oDiv.style.float = 'left';
+
+     oDiv.style.styleFloat = 'left';
+     oDiv.style.cssFloat = 'left';
+
+     IE (styleFloat) 、非IE（cssFloat）
+*/
+     /*
+     .left{float:left;}
+     .right{float:right;}
+
+     <div class="right"></div>
+  */
+</script>
+</body>
+</html>

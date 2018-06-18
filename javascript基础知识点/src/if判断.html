@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    /* if(条件){
+      ....
+    }
+    if(条件){
+      .....
+    }else{
+      ....
+    }
+    if(条件1){
+      ..
+    }else if (条件2){
+      ....
+    } else if (条件3){
+      .....
+    } else if (条件4){
+      ....
+    } else{
+
+    }*/
+
+    window.onload = function () {
+      var oBtn1 = document.getElementById('btn1');
+      var oBtn2 = document.getElementById('btn2');
+      var oP = document.getElementById('p1');
+
+      var num = 15;
+
+      oBtn1.onclick = function(){
+        if( num > 12) {
+            num--;
+            oP.style.fontSize = num + 'px';
+        }
+      };
+      oBtn2.onclick = function () {
+        if ( num < 22) {
+            num++;
+            oP.style.fontSize = num + 'px';
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+<input id="btn1" type="button" value="-">
+<input id="btn2" type="button" value="+">
+<p id="p1" style="font-size:15px">习近平在贺信中指出，人民日报是党中央机关报。70年来，在党中央坚强领导下，人民日报坚持政治家办报和党性原则，与党和人民同心同德，
+  深入宣传党的理论和路线方针政策，热情报道人民的伟大实践，在革命、建设、改革各个历史时期发挥了十分重要的作用，创造了光荣历史。
+  习近平强调，当前，中国特色社会主义进入了新时代，全面建设社会主义现代化强国新征程已经开启。人民日报要深入学习贯彻新时代中
+  国特色社会主义思想和党的十九大精神，忠实履行党的新闻舆论工作职责使命，坚持正确政治方向，弘扬优良传统，深化改革创新，加强队伍建设，
+  改进宣传报道，讲好中国故事，构建全媒体传播格局，不断提升传播力、引导力、影响力、公信力，为实现“两个一百年”奋斗目标、实现中华民族伟
+  大复兴的中国梦作出新的更大贡献。</p>
+
+</body>
+</html>

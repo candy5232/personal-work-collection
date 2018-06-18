@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    window.onload = function () {
+      var oText = document.getElementById('text');
+      var oBtn = document.getElementById('btn');
+
+      oBtn.onclick = function () {
+
+       /* if(条件1){
+        ..
+        }else if (条件2){
+        ....
+        } else if (条件3){
+        .....
+        } else if (条件4){
+        ....
+        } else{
+
+        }*/
+
+        if( oText.value == ''){
+
+           alert (' 写啥内容');
+
+        } else if( oText.value == 'css'){
+
+          alert ('你写的是css，通过!');
+
+        } else if( oText.value == 'js'){
+
+          alert ('你写的是js，通过!');
+
+        } else if( oText.value == 'html'){
+
+          alert ('你写的是html，通过!');
+        } else {
+          alert(' 不好意思，你输入的东西是:' + oText.value + '不让通过！！');
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+ 通关口令：
+ <input  id="text" type="text">
+<input id="btn" type="button" value="验证">
+</body>
+</html>

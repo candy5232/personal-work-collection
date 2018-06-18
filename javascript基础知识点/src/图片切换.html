@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换</title>
+  <style>
+    a{
+      text-decoration: none;
+    }
+    #content{
+      width: 600px;
+      height: 300px;
+      border:5px solid #ccc;
+      margin:40px auto;
+      position: relative;
+      background: #f1f1f1;
+
+    }
+    #content a{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 30px;
+      font-weight: bold;
+      position: absolute;
+      top:130px;
+      border:5px solid #ccc;
+      background: #000;
+      color: #fff;
+      text-align:center;
+      filter: alpha(opacity:60);
+      opacity: 0.6;
+    }
+    #content a:hover{
+      filter: alpha(opacity:80);
+      opacity: 0.8;
+    }
+    #prev{
+      left: 0;
+    }
+    #next{
+      right: 0;
+    }
+    #text, #span1{
+      position: absolute;
+      left: 0;
+      width: 600px;
+      height: 30px;
+      line-height: 30px;
+      background: #000;
+      filter: alpha(opacity:80);
+      opacity: 0.8;
+      text-align: center;
+      color: #fff;
+    }
+    #text{
+      bottom:0;
+      margin:0;
+    }
+    #span1{
+      top:0;
+    }
+    #img{
+      width: 600px;
+      height: 300px;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      var oPrev = document.getElementById('prev');
+      var oNext = document.getElementById('next');
+      var oText = document.getElementById('text');
+      var oSpan = document.getElementById('span1');
+      var oImg = document.getElementById('img');
+
+
+      var arrUrl = ['img/5.jpg', 'img/6.jpg', 'img/6.jpg', 'img/7.jpg', 'img/8.jpg'];
+      var arrText = ['车展美女1', '车展美女2', '车展美女3', '车展美女4', '车展美女5'];
+
+      var num = 0;
+
+      //初始化
+      function fnTab() {
+        oSpan.innerHTML = num + 1 + '/' + arrText.length;    // 1/4
+        oImg.src = arrUrl[num];   //图片
+        oText.innerHTML = arrText[num];  // 文字
+      }
+      fnTab();
+
+      oNext.onclick = function () {
+        num++;
+        if (num == arrText.length) {
+          num = 0;
+        }
+        fnTab()
+      };
+      oPrev.onclick = function () {
+        num--;
+        if (num == -1) {
+          num = arrText.length- 1;
+        }
+      fnTab();
+     }
+    }
+
+  </script>
+</head>
+<body>
+<div id="content">
+  <a id="prev" href="javascript:;"> < </a>
+  <a id="next" href="javascript:;"> > </a>
+  <p id="text">图片文字加载中</p>
+  <span id="span1">数量正在计算中。。。</span>
+  <img id="img">
+</div>
+</body>
+</html>

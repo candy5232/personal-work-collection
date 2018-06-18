@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML小实例</title>
+  <style>
+    #div1{
+      width: 240px;
+      height: 200px;
+      border:1px solid #333;
+      background:#f1f1f1;
+      padding: 10px;
+    }
+  </style>
+<script>
+  window.onload = function () {
+    var oDiv = document.getElementById('div1');
+    var oSpan = document.getElementById('span');
+    var oText = document.getElementById('text');
+    var oBtn = document.getElementById('btn');
+
+    //a = a+b;
+    //a += b;
+    oBtn.onclick = function () {
+     // oDiv.innerHTML = oDiv.innerHTML + oSpan.innerHTML + oText.value + '<br/>';
+      oDiv.innerHTML += oSpan.innerHTML + oText.value + '<br/>';
+      oText.value = '';
+    }
+  }
+</script>
+</head>
+<body>
+<div id="div1"></div>
+<span id="span">妙味：</span>
+<input id="text" type="text">
+<input id="btn" type="button" value="提交">
+</body>
+</html>

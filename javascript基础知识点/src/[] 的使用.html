@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    #div1{
+      width: 300px;
+      height: 300px;
+      border:1px solid #f00;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    window.onload = function () {
+      var oAttr = document.getElementById('attr');
+      var oVal = document.getElementById('val');
+      var oBtn = document.getElementById('btn1');
+      var oDiv = document.getElementById('div1');
+       //  js中允许 "."替换成"[]"
+      oBtn.onclick = function () {
+        oAttr.value  // 'width'  'background'
+        oVal.value    // /200px'  'red'
+
+        oDiv.style.width =  oVal.value;    // 后面的值无法修改
+        oDiv.style[ oAttr.value] = oVal.value;   // 里面的值可以随便写
+
+      }
+    }
+  </script>
+</head>
+<body>
+请输入属性名称： <input id="attr" type="text"><br/>
+请输入属性值： <input id="val" type="text">
+<input id="btn1" type="button" value="确定">
+<div id="div1"></div>
+</body>
+</html>
